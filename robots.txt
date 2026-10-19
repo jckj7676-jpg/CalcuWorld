@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /ads.txt
+Sitemap: https://calcworld.example.com/sitemap.xml

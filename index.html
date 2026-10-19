@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="CalcuWorld — free, instant, privacy-friendly online calculators for mortgage, personal loans, compound interest, sales tax, BMI, TDEE, body fat, scientific math, unit conversion, age, date difference, tips and percentages. All calculations run in your browser." />
+  <meta name="keywords" content="online calculator, mortgage calculator, loan calculator, compound interest, sales tax calculator, BMI calculator, TDEE calculator, calorie calculator, body fat calculator, scientific calculator, unit converter, age calculator, date difference calculator, tip calculator, percentage calculator, free calculators" />
+  <meta name="author" content="CalcuWorld" />
+  <meta name="theme-color" content="#0f766e" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="CalcuWorld" />
+  <meta property="og:title" content="CalcuWorld — Free Online Calculators for Every Need" />
+  <meta property="og:description" content="Instant, accurate, privacy-first calculators for finance, health, math and everyday life. Everything runs in your browser." />
+  <meta property="og:url" content="https://calcworld.example.com/" />
+  <meta property="og:image" content="https://calcworld.example.com/og-image.png" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="CalcuWorld — Free Online Calculators" />
+  <meta name="twitter:description" content="Instant, accurate, privacy-first calculators for finance, health, math and everyday life." />
+
+  <title>CalcuWorld — Free Online Calculators (Finance, Health, Math &amp; Everyday)</title>
+  <link rel="canonical" href="https://calcworld.example.com/" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🧮</text></svg>" />
+
+  <!-- JSON-LD: WebSite + SearchAction -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "CalcuWorld",
+    "url": "https://calcworld.example.com/",
+    "description": "Free online calculators for finance, health, math and everyday life.",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://calcworld.example.com/?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+  </script>
+</head>
+<body>
+  <a href="#main" class="skip-link">Skip to main content</a>
+
+  <!-- ===================== HEADER ===================== -->
+  <header class="site-header" role="banner">
+    <div class="container header-inner">
+      <a href="#/" class="logo" aria-label="CalcuWorld Home">
+        <span class="logo-icon" aria-hidden="true">🧮</span>
+        <span class="logo-text">Calcu<span class="logo-accent">World</span></span>
+      </a>
+
+      <nav class="main-nav" id="main-nav" aria-label="Primary navigation">
+        <ul class="nav-list">
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Financial <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#mortgage" data-calc="mortgage">Mortgage Loan</a></li>
+              <li><a href="#personal-loan" data-calc="personal-loan">Personal Loan</a></li>
+              <li><a href="#compound-interest" data-calc="compound-interest">Compound Interest</a></li>
+              <li><a href="#sales-tax" data-calc="sales-tax">Sales Tax</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Health <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#bmi" data-calc="bmi">BMI Calculator</a></li>
+              <li><a href="#tdee" data-calc="tdee">Calorie / TDEE</a></li>
+              <li><a href="#body-fat" data-calc="body-fat">Body Fat %</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Math <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#scientific" data-calc="scientific">Scientific Calculator</a></li>
+              <li><a href="#unit-converter" data-calc="unit-converter">Unit Converter</a></li>
+              <li><a href="#percentage" data-calc="percentage">Percentage</a></li>
+            </ul>
+          </li>
+          <li class="nav-item has-dropdown">
+            <button type="button" class="nav-link" aria-haspopup="true" aria-expanded="false">
+              Everyday <span class="caret" aria-hidden="true">▾</span>
+            </button>
+            <ul class="dropdown">
+              <li><a href="#age" data-calc="age">Age Calculator</a></li>
+              <li><a href="#date-diff" data-calc="date-diff">Date Difference</a></li>
+              <li><a href="#tip" data-calc="tip">Tip Calculator</a></li>
+            </ul>
+          </li>
+          <li class="nav-item"><a href="#/about" class="nav-link">About</a></li>
+          <li class="nav-item"><a href="#/contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions">
+        <div class="header-search" role="search">
+          <label for="globalSearch" class="sr-only">Search calculators</label>
+          <input type="search" id="globalSearch" placeholder="Search calculators…" autocomplete="off" />
+          <span class="search-icon" aria-hidden="true">🔍</span>
+        </div>
+
+        <label for="langSelect" class="sr-only">Language</label>
+        <select id="langSelect" class="lang-select" aria-label="Select language">
+          <option value="en">EN</option>
+          <option value="ar">AR</option>
+          <option value="es">ES</option>
+          <option value="fr">FR</option>
+          <option value="de">DE</option>
+        </select>
+
+        <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" aria-pressed="false">
+          <span class="theme-icon" aria-hidden="true">🌙</span>
+        </button>
+
+        <button id="mobileMenuBtn" class="mobile-menu-btn" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="main-nav">
+          <span aria-hidden="true">☰</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ===================== MAIN ===================== -->
+  <main id="main">
+    <!-- HOME VIEW -->
+    <div id="view-home">
+      <section class="hero" aria-labelledby="hero-title">
+        <div class="container hero-inner">
+          <h1 id="hero-title" class="hero-title">Free Online Calculators for Every Need</h1>
+          <p class="hero-subtitle">
+            Fast, accurate and privacy-friendly calculators for finance, health, math and everyday life —
+            everything runs instantly in your browser, no sign-up required.
+          </p>
+
+          <div class="hero-search" role="search">
+            <label for="heroSearch" class="sr-only">Search a calculator</label>
+            <input type="search" id="heroSearch" placeholder="Try 'mortgage', 'BMI', 'age'…" autocomplete="off" />
+            <button id="heroSearchBtn" type="button">Search</button>
+          </div>
+
+          <div class="quick-links" aria-label="Quick category links">
+            <a href="#financial" class="quick-link" data-cat="financial">💰 Financial</a>
+            <a href="#health" class="quick-link" data-cat="health">❤️ Health</a>
+            <a href="#math" class="quick-link" data-cat="math">🧮 Math</a>
+            <a href="#everyday" class="quick-link" data-cat="everyday">📅 Everyday</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- HEADER AD -->
+      <div class="container">
+        <aside class="ad-slot ad-header" aria-label="Advertisement">
+          <!--
+            AdSense HEADER BANNER
+            <ins class="adsbygoogle"
+                 style="display:block"
+                 data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                 data-ad-slot="XXXXXXXXXX"
+                 data-ad-format="auto"
+                 data-full-width-responsive="true"></ins>
+            <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+          -->
+          <span class="ad-label">Advertisement</span>
+        </aside>
+      </div>
+
+      <div class="container main-grid">
+        <div class="content-col">
+          <section class="categories-section" aria-labelledby="cat-title">
+            <h2 id="cat-title" class="section-title">Browse by Category</h2>
+
+            <div id="cardsGrid" class="cards-grid">
+              <article class="category-card" data-category="financial" data-calc="mortgage" tabindex="0" role="button" aria-label="Open Mortgage Loan Calculator">
+                <div class="card-icon" aria-hidden="true">🏠</div>
+                <h3>Mortgage Loan</h3>
+                <p>Estimate monthly payments, interest and total cost of a home loan.</p>
+                <span class="card-badge">Financial</span>
+              </article>
+
+              <article class="category-card" data-category="financial" data-calc="personal-loan" tabindex="0" role="button" aria-label="Open Personal Loan Calculator">
+                <div class="card-icon" aria-hidden="true">💵</div>
+                <h3>Personal Loan</h3>
+                <p>Calculate monthly installments and total interest on personal loans.</p>
+                <span class="card-badge">Financial</span>
+              </article>
+
+              <article class="category-card" data-category="financial" data-calc="compound-interest" tabindex="0" role="button" aria-label="Open Compound Interest Calculator">
+                <div class="card-icon" aria-hidden="true">📈</div>
+                <h3>Compound Interest</h3>
+                <p>See how your investments grow over time with compounding.</p>
+                <span class="card-badge">Financial</span>
+              </article>
+
+              <article class="category-card" data-category="financial" data-calc="sales-tax" tabindex="0" role="button" aria-label="Open Sales Tax Calculator">
+                <div class="card-icon" aria-hidden="true">🧾</div>
+                <h3>Sales Tax</h3>
+                <p>Add or subtract sales tax from any amount instantly.</p>
+                <span class="card-badge">Financial</span>
+              </article>
+
+              <article class="category-card" data-category="health" data-calc="bmi" tabindex="0" role="button" aria-label="Open BMI Calculator">
+                <div class="card-icon" aria-hidden="true">⚖️</div>
+                <h3>BMI Calculator</h3>
+                <p>Find your Body Mass Index and understand your weight range.</p>
+                <span class="card-badge">Health</span>
+              </article>
+
+              <article class="category-card" data-category="health" data-calc="tdee" tabindex="0" role="button" aria-label="Open Calorie and TDEE Calculator">
+                <div class="card-icon" aria-hidden="true">🔥</div>
+                <h3>Calorie / TDEE</h3>
+                <p>Calculate daily calorie needs and total energy expenditure.</p>
+                <span class="card-badge">Health</span>
+              </article>
+
+              <article class="category-card" data-category="health" data-calc="body-fat" tabindex="0" role="button" aria-label="Open Body Fat Calculator">
+                <div class="card-icon" aria-hidden="true">💪</div>
+                <h3>Body Fat %</h3>
+                <p>Estimate body fat using the U.S. Navy method.</p>
+                <span class="card-badge">Health</span>
+              </article>
+
+              <article class="category-card" data-category="math" data-calc="scientific" tabindex="0" role="button" aria-label="Open Scientific Calculator">
+                <div class="card-icon" aria-hidden="true">🧮</div>
+                <h3>Scientific Calculator</h3>
+                <p>Trig, logs, exponents and more — solve advanced expressions.</p>
+                <span class="card-badge">Math</span>
+              </article>
+
+              <article class="category-card" data-category="math" data-calc="unit-converter" tabindex="0" role="button" aria-label="Open Unit Converter">
+                <div class="card-icon" aria-hidden="true">🔄</div>
+                <h3>Unit Converter</h3>
+                <p>Convert length, weight and temperature units instantly.</p>
+                <span class="card-badge">Math</span>
+              </article>
+
+              <article class="category-card" data-category="math" data-calc="percentage" tabindex="0" role="button" aria-label="Open Percentage Calculator">
+                <div class="card-icon" aria-hidden="true">％</div>
+                <h3>Percentage Calculator</h3>
+                <p>Solve percentage problems: increase, decrease and more.</p>
+                <span class="card-badge">Math</span>
+              </article>
+
+              <article class="category-card" data-category="everyday" data-calc="age" tabindex="0" role="button" aria-label="Open Age Calculator">
+                <div class="card-icon" aria-hidden="true">🎂</div>
+                <h3>Age Calculator</h3>
+                <p>Find your exact age in years, months and days.</p>
+                <span class="card-badge">Everyday</span>
+              </article>
+
+              <article class="category-card" data-category="everyday" data-calc="date-diff" tabindex="0" role="button" aria-label="Open Date Difference Calculator">
+                <div class="card-icon" aria-hidden="true">📅</div>
+                <h3>Date Difference</h3>
+                <p>Calculate the number of days between two dates.</p>
+                <span class="card-badge">Everyday</span>
+              </article>
+
+              <article class="category-card" data-category="everyday" data-calc="tip" tabindex="0" role="button" aria-label="Open Tip Calculator">
+                <div class="card-icon" aria-hidden="true">🍽️</div>
+                <h3>Tip Calculator</h3>
+                <p>Split the bill and calculate tips for any service.</p>
+                <span class="card-badge">Everyday</span>
+              </article>
+            </div>
+          </section>
+
+          <!-- CALCULATOR PANEL -->
+          <section id="calculatorPanel" class="calculator-panel" aria-live="polite" hidden>
+            <header class="panel-header">
+              <h2 id="panelTitle">Calculator</h2>
+              <div class="panel-actions">
+                <button id="shareBtn" type="button" class="btn-ghost" aria-label="Share result">🔗 Share</button>
+                <button id="printBtn" type="button" class="btn-ghost" aria-label="Print result">🖨️ Print</button>
+                <button id="closePanelBtn" type="button" class="btn-close" aria-label="Close calculator">✕</button>
+              </div>
+            </header>
+            <div id="panelContent" class="panel-content"></div>
+          </section>
+
+          <!-- IN-ARTICLE AD -->
+          <aside class="ad-slot ad-in-article" aria-label="Advertisement">
+            <!--
+              AdSense IN-ARTICLE
+              <ins class="adsbygoogle"
+                   style="display:block; text-align:center;"
+                   data-ad-layout="in-article"
+                   data-ad-format="fluid"
+                   data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                   data-ad-slot="XXXXXXXXXX"></ins>
+              <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            -->
+            <span class="ad-label">Advertisement</span>
+          </aside>
+
+          <!-- EDUCATIONAL / FAQ CONTENT -->
+          <section class="edu-section" aria-labelledby="edu-title">
+            <h2 id="edu-title" class="section-title">How CalcuWorld Helps You</h2>
+            <div class="edu-grid">
+              <article class="edu-card">
+                <h3>💼 Plan Finances with Confidence</h3>
+                <p>Use our mortgage, personal loan, compound interest and sales tax calculators to compare offers, estimate monthly costs and understand how interest compounds. Every result updates live as you type — no page reloads, no waiting.</p>
+              </article>
+              <article class="edu-card">
+                <h3>❤️ Track Health &amp; Fitness Metrics</h3>
+                <p>Our BMI, TDEE and body fat calculators use widely accepted formulas — the Mifflin–St Jeor equation for daily energy needs and the U.S. Navy circumference method for body fat. Use them for general wellness awareness, not medical diagnosis.</p>
+              </article>
+              <article class="edu-card">
+                <h3>🧮 Solve Math Instantly</h3>
+                <p>From trig and logarithms to unit conversion between length, weight and temperature, CalcuWorld's math tools work offline in your browser. Input validation prevents divide-by-zero and other common errors.</p>
+              </article>
+              <article class="edu-card">
+                <h3>📅 Handle Everyday Numbers</h3>
+                <p>Calculate your age in years, months and days, find the exact number of days between two dates, or split a restaurant bill with a custom tip — all in one place, with instant results.</p>
+              </article>
+            </div>
+          </section>
+
+          <section class="edu-section" aria-labelledby="faq-title">
+            <h2 id="faq-title" class="section-title">Frequently Asked Questions</h2>
+            <div class="faq-list">
+              <details class="faq-item">
+                <summary>Are CalcuWorld calculators free to use?</summary>
+                <p>Yes. Every calculator on CalcuWorld is 100% free, requires no sign-up and runs entirely in your browser.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Is my input data private?</summary>
+                <p>Yes. All calculations happen locally in your browser using JavaScript. Your numbers are never transmitted to any server.</p>
+              </details>
+              <details class="faq-item">
+                <summary>How accurate are the health calculators?</summary>
+                <p>BMI, TDEE and body fat calculators use standard formulas (Mifflin–St Jeor, U.S. Navy method). They provide helpful estimates but are not a substitute for professional medical advice.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Can I use CalcuWorld on mobile?</summary>
+                <p>Absolutely. CalcuWorld is fully responsive and works on phones, tablets and desktops. Layouts adapt to your screen size automatically.</p>
+              </details>
+              <details class="faq-item">
+                <summary>Do you store any cookies?</summary>
+                <p>We use <code>localStorage</code> only to remember your theme (dark/light) and language choice. Advertising partners may set cookies — see our Privacy Policy and Cookie Policy for details.</p>
+              </details>
+              <details class="faq-item">
+                <summary>How often are calculators updated?</summary>
+                <p>We review formulas and usability regularly. If you spot an issue, reach out via the Contact page — we appreciate feedback.</p>
+              </details>
+            </div>
+          </section>
+        </div>
+
+        <!-- SIDEBAR -->
+        <aside class="sidebar" aria-label="Sidebar">
+          <aside class="ad-slot ad-sidebar" aria-label="Advertisement">
+            <!--
+              AdSense SIDEBAR (300x250 / 300x600)
+              <ins class="adsbygoogle"
+                   style="display:inline-block;width:300px;height:250px"
+                   data-ad-client="ca-pub-XXXXXXXXXXXXXXXX"
+                   data-ad-slot="XXXXXXXXXX"></ins>
+              <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+            -->
+            <span class="ad-label">Advertisement</span>
+          </aside>
+
+          <nav class="sidebar-nav" aria-label="Popular calculators">
+            <h3>Popular Calculators</h3>
+            <ul>
+              <li><a href="#mortgage" data-calc="mortgage">Mortgage Calculator</a></li>
+              <li><a href="#bmi" data-calc="bmi">BMI Calculator</a></li>
+              <li><a href="#tdee" data-calc="tdee">TDEE Calculator</a></li>
+              <li><a href="#scientific" data-calc="scientific">Scientific Calculator</a></li>
+              <li><a href="#age" data-calc="age">Age Calculator</a></li>
+            </ul>
+          </nav>
+
+          <nav class="sidebar-nav" aria-label="Legal">
+            <h3>Legal</h3>
+            <ul>
+              <li><a href="#/privacy">Privacy Policy</a></li>
+              <li><a href="#/terms">Terms of Service</a></li>
+              <li><a href="#/cookies">Cookie Policy</a></li>
+            </ul>
+          </nav>
+        </aside>
+      </div>
+    </div>
+
+    <!-- COMPLIANCE / STATIC VIEW (rendered by router) -->
+    <div id="view-static" class="container static-view" hidden></div>
+  </main>
+
+  <!-- ===================== FOOTER ===================== -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="logo">
+          <span class="logo-icon" aria-hidden="true">🧮</span>
+          <span class="logo-text">Calcu<span class="logo-accent">World</span></span>
+        </div>
+        <p>Free online calculators for finance, health, math and everyday life. No sign-up, no tracking — everything runs in your browser.</p>
+      </div>
+
+      <nav class="footer-links" aria-labelledby="footer-company">
+        <h4 id="footer-company">Company</h4>
+        <ul>
+          <li><a href="#/about">About Us</a></li>
+          <li><a href="#/contact">Contact Us</a></li>
+          <li><a href="#/privacy">Privacy Policy</a></li>
+          <li><a href="#/terms">Terms of Service</a></li>
+          <li><a href="#/cookies">Cookie Policy</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-labelledby="footer-calc">
+        <h4 id="footer-calc">Calculators</h4>
+        <ul>
+          <li><a href="#mortgage" data-calc="mortgage">Mortgage</a></li>
+          <li><a href="#bmi" data-calc="bmi">BMI</a></li>
+          <li><a href="#tdee" data-calc="tdee">TDEE</a></li>
+          <li><a href="#scientific" data-calc="scientific">Scientific</a></li>
+          <li><a href="#unit-converter" data-calc="unit-converter">Unit Converter</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-links" aria-labelledby="footer-support">
+        <h4 id="footer-support">Support</h4>
+        <ul>
+          <li><a href="#/contact">Help Center</a></li>
+          <li><a href="#/contact">Feedback</a></li>
+          <li><a href="#/about">Our Story</a></li>
+        </ul>
+      </nav>
+    </div>
+
+    <div class="container copyright">
+      <p>&copy; <span id="year"></span> CalcuWorld. All rights reserved.</p>
+      <p class="disclaimer">Calculators are provided for educational and informational purposes only. Always verify critical calculations.</p>
+    </div>
+  </footer>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
