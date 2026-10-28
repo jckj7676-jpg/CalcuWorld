@@ -867,18 +867,18 @@
         <p>We'd love to hear from you. Whether it's a bug report, a feature request, or a question about our calculators — reach out anytime.</p>
 
         <h2>Email</h2>
-        <p>General inquiries: <a href="mailto:hello@calcworld.example.com">hello@calcworld.example.com</a><br>
-        Advertising: <a href="mailto:ads@calcworld.example.com">ads@calcworld.example.com</a><br>
-        Privacy &amp; legal: <a href="mailto:legal@calcworld.example.com">legal@calcworld.example.com</a></p>
+        <p>General inquiries: <a href="mailto:mobilemazzaya448@gmail.com">hello@calcworld.example.com</a><br>
+        Advertising: <a href="mailto:jckj7676@gmail.com">ads@calcworld.example.com</a><br>
+        Privacy &amp; legal: <a href="mailto:nngnngf@gmail.com">legal@calcworld.example.com</a></p>
 
         <h2>Response Time</h2>
         <p>We aim to respond to all messages within 2 business days.</p>
+ <h2>Mailing Address</h2>
+<p>CalcuWorld<br>
+2 Malak Hefni, An Nasereyah<br>
+Third Al Montazah, Alexandria<br>
+Governorate 5523113, Egypt</p>
 
-        <h2>Mailing Address</h2>
-        <p>CalcuWorld<br>
-        123 Calculator Lane<br>
-        Example City, 00000<br>
-        (Replace with your real business address before launch.)</p>
 
         <h2>Report an Issue</h2>
         <p>If a calculator returns an incorrect result, please include the calculator name, inputs you used, and the result you expected. This helps us fix issues quickly.</p>
