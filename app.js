@@ -867,9 +867,9 @@
         <p>We'd love to hear from you. Whether it's a bug report, a feature request, or a question about our calculators — reach out anytime.</p>
 
         <h2>Email</h2>
-        <p>General inquiries: <a href="mailto:mobilemazzaya448@gmail.com">hello@calcworld.example.com</a><br>
-        Advertising: <a href="mailto:jckj7676@gmail.com">ads@calcworld.example.com</a><br>
-        Privacy &amp; legal: <a href="mailto:nngnngf@gmail.com">legal@calcworld.example.com</a></p>
+        <p>General inquiries: <a href="mailto:mobilemazzaya448@gmail.com">mailto:mobilemazzaya448@gmail.com</a><br>
+        Advertising: <a href="mailto:jckj7676@gmail.com">jckj7676@gmail.com</a><br>
+        Privacy &amp; legal: <a href="mailto:nngnngf@gmail.com">nngnngf@gmail.com</a></p>
 
         <h2>Response Time</h2>
         <p>We aim to respond to all messages within 2 business days.</p>
