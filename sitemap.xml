@@ -2,27 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://www.calcuworld.xyz/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
   </url>
   <url>
     <loc>https://www.calcuworld.xyz/about</loc>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.calcuworld.xyz/contact</loc>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.calcuworld.xyz/privacy</loc>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.calcuworld.xyz/terms</loc>
-    <priority>0.5</priority>
   </url>
   <url>
     <loc>https://www.calcuworld.xyz/cookies</loc>
-    <priority>0.5</priority>
   </url>
 </urlset>
