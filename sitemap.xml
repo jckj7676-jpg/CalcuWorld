@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://www.calcuworld.xyz/</loc>
+    <loc>https://www.calcuworld.xyz/#home</loc>
   </url>
   <url>
-    <loc>https://www.calcuworld.xyz/mortgage</loc>
+    <loc>https://www.calcuworld.xyz/#mortgage</loc>
   </url>
   <url>
-    <loc>https://www.calcuworld.xyz/date-diff</loc>
+    <loc>https://www.calcuworld.xyz/#date-diff</loc>
   </url>
   <url>
-    <loc>https://www.calcuworld.xyz/percentage</loc>
+    <loc>https://www.calcuworld.xyz/#percentage</loc>
   </url>
   <url>
-    <loc>https://www.calcuworld.xyz/unit-converter</loc>
+    <loc>https://www.calcuworld.xyz/#unit-converter</loc>
   </url>
   <url>
-    <loc>https://www.calcuworld.xyz/contact</loc>
+    <loc>https://www.calcuworld.xyz/#contact</loc>
   </url>
 </urlset>
