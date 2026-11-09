@@ -757,7 +757,7 @@
   /* ============================================================
      ROUTER — static compliance pages
      ============================================================ */
-  const viewHome = $('#view-home');
+    const viewHome = $('#view-home');
   const viewStatic = $('#view-static');
 
   const pages = {
@@ -860,7 +860,7 @@
         <p>Questions, suggestions or feedback? Use our <a href="#/contact">Contact page</a> — we read every message.</p>
       `,
     },
-        contact: {
+    contact: {
       title: 'Contact Us',
       updated: '',
       body: `
@@ -884,7 +884,7 @@
         <p>If a calculator returns an incorrect result, please include the calculator name, inputs you used, and the result you expected. This helps us fix issues quickly.</p>
       `,
     },
-
+  };
 
   const renderStatic = (key) => {
     const page = pages[key];
