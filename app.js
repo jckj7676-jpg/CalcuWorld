@@ -760,28 +760,22 @@
     const viewHome = $('#view-home');
   const viewStatic = $('#view-static');
 
-  const pages = {
+    const pages = {
     privacy: {
       title: 'Privacy Policy',
       updated: 'Last updated: January 2025',
       body: `
         <p>CalcuWorld ("we", "us") respects your privacy. This policy explains what data is (and isn't) collected when you use our calculators.</p>
-
         <h2>1. Information We Collect</h2>
         <p>All calculator computations run entirely in your browser. We do not transmit, store, or process the numbers you enter into any calculator. Your inputs never leave your device.</p>
-
         <h2>2. Cookies &amp; Local Storage</h2>
         <p>We use <code>localStorage</code> to remember your theme (light/dark) and language preferences. You can clear these at any time from your browser settings.</p>
-
         <h2>3. Advertising</h2>
         <p>We may display advertising via Google AdSense. Google and its partners may use cookies to serve ads based on your prior visits to this website or other websites. You can opt out of personalized advertising at <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">google.com/settings/ads</a>.</p>
-
         <h2>4. Analytics</h2>
         <p>If enabled, aggregate, anonymized analytics (e.g., page views) may be collected to improve the site. No calculator inputs are ever included.</p>
-
         <h2>5. Your Rights</h2>
         <p>You may request details about any personal data we hold by contacting us via the <a href="#/contact">Contact page</a>. Under GDPR/CCPA you have rights to access, correct, and delete personal data.</p>
-
         <h2>6. Contact</h2>
         <p>Questions? Reach out through our <a href="#/contact">Contact page</a>.</p>
       `,
@@ -791,25 +785,18 @@
       updated: 'Last updated: January 2025',
       body: `
         <p>By accessing CalcuWorld you agree to these terms. If you do not agree, please discontinue use.</p>
-
         <h2>1. Use of Service</h2>
         <p>CalcuWorld provides free online calculators for personal, non-commercial use. You agree not to misuse the site, attempt unauthorized access, or scrape content without permission.</p>
-
         <h2>2. No Professional Advice</h2>
         <p>Calculator results are provided for informational and educational purposes only. They are <strong>not</strong> financial, medical, legal or tax advice. Consult a qualified professional before making important decisions.</p>
-
         <h2>3. Accuracy</h2>
         <p>We strive for accuracy using standard published formulas but make no warranty that results are error-free. Always verify critical calculations independently.</p>
-
         <h2>4. Intellectual Property</h2>
         <p>Content, design and code are the property of CalcuWorld unless otherwise noted. You may not republish materials without written permission.</p>
-
         <h2>5. Limitation of Liability</h2>
         <p>CalcuWorld is not liable for any damages arising from use of or reliance on the calculators.</p>
-
         <h2>6. Changes</h2>
         <p>We may update these terms from time to time. Continued use after changes constitutes acceptance.</p>
-
         <h2>7. Governing Law</h2>
         <p>These terms are governed by the laws of your jurisdiction of residence, to the extent permitted by law.</p>
       `,
@@ -819,19 +806,15 @@
       updated: 'Last updated: January 2025',
       body: `
         <p>This Cookie Policy explains how CalcuWorld uses cookies and similar technologies.</p>
-
         <h2>1. What Are Cookies?</h2>
         <p>Cookies are small text files stored on your device by your browser. They help websites remember preferences and serve relevant advertising.</p>
-
         <h2>2. Cookies We Use</h2>
         <ul>
           <li><strong>Essential:</strong> We use <code>localStorage</code> (not a cookie, technically) to remember your theme and language choice.</li>
           <li><strong>Advertising:</strong> Third-party partners such as Google AdSense may set cookies to serve personalized or non-personalized ads.</li>
         </ul>
-
         <h2>3. Managing Cookies</h2>
         <p>You can control cookies through your browser settings. Disabling cookies may affect some site features but calculator functionality is unaffected.</p>
-
         <h2>4. Third-Party Opt-Out</h2>
         <p>To opt out of personalized Google advertising, visit <a href="https://www.google.com/settings/ads" rel="noopener noreferrer" target="_blank">google.com/settings/ads</a>. For EU users, visit <a href="https://www.youronlinechoices.eu/" rel="noopener noreferrer" target="_blank">youronlinechoices.eu</a>.</p>
       `,
@@ -841,10 +824,8 @@
       updated: '',
       body: `
         <p>CalcuWorld is a free, privacy-first collection of online calculators for finance, health, math and everyday life. Every calculator is built to be fast, accurate and fully functional in your browser — no sign-up, no tracking, no data sent to a server.</p>
-
         <h2>Our Mission</h2>
         <p>We believe useful tools should be free, fast, and respectful of privacy. CalcuWorld exists to give you instant answers without cluttering your screen with pop-ups or forcing you to create an account.</p>
-
         <h2>What We Offer</h2>
         <ul>
           <li>Financial calculators — mortgage, personal loans, compound interest, sales tax.</li>
@@ -852,10 +833,8 @@
           <li>Math &amp; conversion — scientific, unit converter, percentage.</li>
           <li>Everyday utilities — age, date difference, tip splitting.</li>
         </ul>
-
         <h2>How It Works</h2>
         <p>All calculators are built in vanilla JavaScript. When you type in a value, the result updates instantly in your browser. The numbers you enter never leave your device — there's no backend, no database, and no logging.</p>
-
         <h2>Contact</h2>
         <p>Questions, suggestions or feedback? Use our <a href="#/contact">Contact page</a> — we read every message.</p>
       `,
@@ -865,26 +844,23 @@
       updated: '',
       body: `
         <p>We'd love to hear from you. Whether it's a bug report, a feature request, or a question about our calculators — reach out anytime.</p>
-
         <h2>Email</h2>
         <p>General inquiries: <a href="mailto:mobilemazzaya448@gmail.com">mobilemazzaya448@gmail.com</a><br>
         Advertising: <a href="mailto:jckj7676@gmail.com">jckj7676@gmail.com</a><br>
         Privacy &amp; legal: <a href="mailto:nngnngf@gmail.com">nngnngf@gmail.com</a></p>
-
         <h2>Response Time</h2>
         <p>We aim to respond to all messages within 2 business days.</p>
-
         <h2>Mailing Address</h2>
         <p>CalcuWorld<br>
         2 Malak Hefni, An Nasereyah<br>
         Third Al Montazah, Alexandria<br>
         Governorate 5523113, Egypt</p>
-
         <h2>Report an Issue</h2>
-        <p>If a calculator returns an incorrect result, please include the calculator name, inputs you used, and the result you expected. This helps us fix issues quickly.</p>
+        <p>If a calculator returns an unexpected result, please include the calculator name, inputs you used, and the result you expected. This helps us fix issues quickly.</p>
       `,
     },
   };
+
 
   const renderStatic = (key) => {
     const page = pages[key];
