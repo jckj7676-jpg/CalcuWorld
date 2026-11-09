@@ -860,31 +860,31 @@
         <p>Questions, suggestions or feedback? Use our <a href="#/contact">Contact page</a> — we read every message.</p>
       `,
     },
-    contact: {
+        contact: {
       title: 'Contact Us',
       updated: '',
       body: `
         <p>We'd love to hear from you. Whether it's a bug report, a feature request, or a question about our calculators — reach out anytime.</p>
 
         <h2>Email</h2>
-        <p>General inquiries: <a href="mailto:mobilemazzaya448@gmail.com">mailto:mobilemazzaya448@gmail.com</a><br>
+        <p>General inquiries: <a href="mailto:mobilemazzaya448@gmail.com">mobilemazzaya448@gmail.com</a><br>
         Advertising: <a href="mailto:jckj7676@gmail.com">jckj7676@gmail.com</a><br>
         Privacy &amp; legal: <a href="mailto:nngnngf@gmail.com">nngnngf@gmail.com</a></p>
 
         <h2>Response Time</h2>
         <p>We aim to respond to all messages within 2 business days.</p>
- <h2>Mailing Address</h2>
-<p>CalcuWorld<br>
-2 Malak Hefni, An Nasereyah<br>
-Third Al Montazah, Alexandria<br>
-Governorate 5523113, Egypt</p>
 
+        <h2>Mailing Address</h2>
+        <p>CalcuWorld<br>
+        2 Malak Hefni, An Nasereyah<br>
+        Third Al Montazah, Alexandria<br>
+        Governorate 5523113, Egypt</p>
 
         <h2>Report an Issue</h2>
         <p>If a calculator returns an incorrect result, please include the calculator name, inputs you used, and the result you expected. This helps us fix issues quickly.</p>
       `,
     },
-  };
+
 
   const renderStatic = (key) => {
     const page = pages[key];
