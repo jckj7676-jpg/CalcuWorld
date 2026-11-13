@@ -1,3 +1,4 @@
+```javascript
 /* ============================================================
    CalcuWorld — Application Logic
    Vanilla JS, no dependencies. All calculations client-side.
@@ -19,8 +20,9 @@
   };
 
   const num = (v, fallback = 0) => {
-    const n = parseFloat(v);
-    return isFinite(n) ? n : fallback;
+    if (typeof v === 'string' && v.trim() === '') return fallback;
+    const n = Number(v);
+    return Number.isFinite(n) ? n : fallback;
   };
 
   const onInput = (el, handler) => {
@@ -74,6 +76,14 @@
   };
 
   const safeDiv = (a, b) => (b === 0 ? 0 : a / b);
+
+  const parseLocalDate = (value) => {
+    const match = /^(\d{4})-(\d{2})-(\d{2})$/.exec(value || '');
+    if (!match) return null;
+    const year = Number(match[1]), month = Number(match[2]) - 1, day = Number(match[3]);
+    const date = new Date(year, month, day);
+    return date.getFullYear() === year && date.getMonth() === month && date.getDate() === day ? date : null;
+  };
 
   /* ============================================================
      THEME
@@ -191,6 +201,7 @@
   heroSearch?.addEventListener('keydown', (e) => { if (e.key === 'Enter') filterCards(heroSearch.value); });
   globalSearch?.addEventListener('input', (e) => filterCards(e.target.value));
 
+  ```javascript
   /* ============================================================
      PANEL
      ============================================================ */
@@ -386,6 +397,8 @@
   };
 
   /* ---------- TDEE ---------- */
+
+```javascript
   calculators.tdee = {
     title: 'Calorie / TDEE Calculator',
     html: () => `
@@ -462,15 +475,21 @@
           out.textContent = '—'; return;
         }
         let bf;
+        // U.S. Navy equations use inches, so convert all cm measurements first.
+        const cmToIn = value => value / 2.54;
+        const heightIn = cmToIn(height);
+        const neckIn = cmToIn(n);
+        const waistIn = cmToIn(wa);
         try {
           if (g.value === 'male') {
-            if (wa - n <= 0) { out.textContent = '—'; return; }
-            bf = 495 / (1.0324 - 0.19077 * Math.log10(wa - n) + 0.15456 * Math.log10(height)) - 450;
+            if (waistIn - neckIn <= 0) { out.textContent = '—'; return; }
+            bf = 495 / (1.0324 - 0.19077 * Math.log10(waistIn - neckIn) + 0.15456 * Math.log10(heightIn)) - 450;
           } else {
             const hp = validatePositive(hip);
             if (hp === null) { out.textContent = '—'; return; }
-            if (wa + hp - n <= 0) { out.textContent = '—'; return; }
-            bf = 495 / (1.29579 - 0.35004 * Math.log10(wa + hp - n) + 0.22100 * Math.log10(height)) - 450;
+            const hipIn = cmToIn(hp);
+            if (waistIn + hipIn - neckIn <= 0) { out.textContent = '—'; return; }
+            bf = 495 / (1.29579 - 0.35004 * Math.log10(waistIn + hipIn - neckIn) + 0.22100 * Math.log10(heightIn)) - 450;
           }
         } catch { out.textContent = '—'; return; }
         if (!isFinite(bf) || bf < 0) { out.textContent = '—'; return; }
@@ -502,21 +521,46 @@
     `,
     init: () => {
       const expr = $('#sciExpr'), out = $('#sciResult'), err = $('#sciExpr-error');
+      const evaluateExpression = (source) => {
+        const tokens = source.match(/(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?|(?:sin|cos|tan|log|ln|sqrt|PI|E)|[()+\-*/%^]/gi);
+        if (!tokens || tokens.join('').toLowerCase() !== source.replace(/\s+/g, '').toLowerCase()) throw new Error('Invalid expression');
+        let pos = 0;
+        const peek = () => tokens[pos];
+        const take = () => tokens[pos++];
+        const functions = { sin: Math.sin, cos: Math.cos, tan: Math.tan, log: Math.log10, ln: Math.log, sqrt: Math.sqrt };
+        const primary = () => {
+          const t = take();
+          if (t === '+') return primary();
+          if (t === '-') return -primary();
+          if (t === '(') {
+            const value = expression();
+            if (take() !== ')') throw new Error('Missing parenthesis');
+            return value;
+          }
+          if (/^(sin|cos|tan|log|ln|sqrt)$/i.test(t || '')) {
+            const fn = functions[t.toLowerCase()];
+            if (take() !== '(') throw new Error('Function needs parentheses');
+            const arg = expression();
+            if (take() !== ')') throw new Error('Missing parenthesis');
+            return fn(arg);
+          }
+          if (/^PI$/i.test(t || '')) return Math.PI;
+          if (/^E$/i.test(t || '')) return Math.E;
+          if (/^(?:\d+(?:\.\d*)?|\.\d+)(?:e[+-]?\d+)?$/i.test(t || '')) return Number(t);
+          throw new Error('Expected a number');
+        };
+        const power = () => { let a = primary(); if (peek() === '^') { take(); a = Math.pow(a, power()); } return a; };
+        const term = () => { let a = power(); while (peek() === '*' || peek() === '/' || peek() === '%') { const op = take(); const b = power(); if ((op === '/' || op === '%') && b === 0) throw new Error('Division by zero'); a = op === '*' ? a * b : op === '/' ? a / b : a % b; } return a; };
+        const expression = () => { let a = term(); while (peek() === '+' || peek() === '-') { const op = take(); const b = term(); a = op === '+' ? a + b : a - b; } return a; };
+        const result = expression();
+        if (pos !== tokens.length || !Number.isFinite(result)) throw new Error('Invalid result');
+        return result;
+      };
       const calc = () => {
         const raw = expr.value.trim();
         if (!raw) { out.textContent = '—'; err.textContent = ''; expr.classList.remove('invalid'); return; }
         try {
-          const safe = raw
-            .replace(/\b(sin|cos|tan)\s*\(/gi, (_, fn) => `Math.${fn.toLowerCase()}(`)
-            .replace(/\blog\s*\(/gi, 'Math.log10(')
-            .replace(/\bln\s*\(/gi, 'Math.log(')
-            .replace(/\bsqrt\s*\(/gi, 'Math.sqrt(')
-            .replace(/\bPI\b/g, 'Math.PI')
-            .replace(/\bE\b/g, 'Math.E')
-            .replace(/\^/g, '**');
-          if (/[a-zA-Z]/.test(safe.replace(/Math\.[a-zA-Z]+/g, ''))) throw new Error('Invalid chars');
-          const result = Function('"use strict"; return (' + safe + ')')();
-          if (typeof result !== 'number' || !isFinite(result)) throw new Error('Invalid result');
+          const result = evaluateExpression(raw);
           out.textContent = result.toLocaleString('en-US', { maximumFractionDigits: 10 });
           err.textContent = '';
           expr.classList.remove('invalid');
@@ -532,6 +576,8 @@
   };
 
   /* ---------- UNIT CONVERTER ---------- */
+
+  ```javascript
   calculators['unit-converter'] = {
     title: 'Unit Converter',
     html: () => {
@@ -646,9 +692,10 @@
       const dob = $('#ageDob'), out = $('#ageResult'), err = $('#ageDob-error');
       const calc = () => {
         if (!dob.value) { out.textContent = '—'; err.textContent = 'Please choose a date.'; return; }
-        const birth = new Date(dob.value);
+        const birth = parseLocalDate(dob.value);
         const now = new Date();
-        if (isNaN(birth.getTime()) || birth > now) {
+        const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+        if (!birth || birth > today) {
           out.textContent = '—';
           err.textContent = 'Date must be in the past.';
           dob.classList.add('invalid');
@@ -689,10 +736,11 @@
       const s = $('#diffStart'), e = $('#diffEnd'), out = $('#diffResult');
       const calc = () => {
         if (!s.value || !e.value) { out.textContent = '—'; return; }
-        const start = new Date(s.value), end = new Date(e.value);
-        if (isNaN(start) || isNaN(end)) { out.textContent = '—'; return; }
-        const diffMs = Math.abs(end - start);
-        const days = Math.round(diffMs / (1000 * 60 * 60 * 24));
+        const start = parseLocalDate(s.value), end = parseLocalDate(e.value);
+        if (!start || !end) { out.textContent = '—'; return; }
+        const startUTC = Date.UTC(start.getFullYear(), start.getMonth(), start.getDate());
+        const endUTC = Date.UTC(end.getFullYear(), end.getMonth(), end.getDate());
+        const days = Math.round(Math.abs(endUTC - startUTC) / 86400000);
         out.textContent = days + ' day' + (days === 1 ? '' : 's');
       };
       [s, e].forEach(el => onInput(el, calc));
@@ -729,6 +777,8 @@
   };
 
   /* ============================================================
+
+```javascript
      OPEN / CLOSE
      ============================================================ */
   const openCalculator = (key) => {
