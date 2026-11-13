@@ -235,7 +235,6 @@
      CALCULATORS
      ============================================================ */
   const calculators = {};
-
   /* ---------- MORTGAGE ---------- */
   calculators.mortgage = {
     title: 'Mortgage Loan Calculator',
@@ -276,7 +275,6 @@
       calc();
     },
   };
-
   /* ---------- PERSONAL LOAN ---------- */
   calculators['personal-loan'] = {
     title: 'Personal Loan Calculator',
@@ -305,7 +303,6 @@
       calc();
     },
   };
-
   /* ---------- COMPOUND INTEREST ---------- */
   calculators['compound-interest'] = {
     title: 'Compound Interest Calculator',
@@ -340,7 +337,6 @@
       calc();
     },
   };
-
   /* ---------- SALES TAX ---------- */
   calculators['sales-tax'] = {
     title: 'Sales Tax Calculator',
@@ -365,7 +361,6 @@
       calc();
     },
   };
-
   /* ---------- BMI ---------- */
   calculators.bmi = {
     title: 'BMI (Body Mass Index) Calculator',
@@ -397,7 +392,6 @@
   };
 
   /* ---------- TDEE ---------- */
-
 ```javascript
   calculators.tdee = {
     title: 'Calorie / TDEE Calculator',
