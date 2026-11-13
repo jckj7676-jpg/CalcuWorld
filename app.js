@@ -1,4 +1,3 @@
-```javascript
 /* ============================================================
    CalcuWorld — Application Logic
    Vanilla JS, no dependencies. All calculations client-side.
@@ -201,7 +200,6 @@
   heroSearch?.addEventListener('keydown', (e) => { if (e.key === 'Enter') filterCards(heroSearch.value); });
   globalSearch?.addEventListener('input', (e) => filterCards(e.target.value));
 
-  ```javascript
   /* ============================================================
      PANEL
      ============================================================ */
@@ -392,7 +390,6 @@
   };
 
   /* ---------- TDEE ---------- */
-```javascript
   calculators.tdee = {
     title: 'Calorie / TDEE Calculator',
     html: () => `
@@ -571,7 +568,6 @@
 
   /* ---------- UNIT CONVERTER ---------- */
 
-  ```javascript
   calculators['unit-converter'] = {
     title: 'Unit Converter',
     html: () => {
@@ -772,7 +768,6 @@
 
   /* ============================================================
 
-```javascript
      OPEN / CLOSE
      ============================================================ */
   const openCalculator = (key) => {
